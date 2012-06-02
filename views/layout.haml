@@ -1,6 +1,8 @@
 !!!5
 %head
   %title An app
-  %link{rel:'stylesheet', href:'/css/screen.css'}
+  %link{rel:'stylesheet', href:'/css/mobile.css', media:'screen and (max-width: 767px)'}
+  %link{rel:'stylesheet', href:'/css/tablet.css', media:'screen and (min-width: 768px) and (max-width: 1024px)'}
+  %link{rel:'stylesheet', href:'/css/screen.css', media:'screen and (min-width: 1025px)'}
 %body
   =yield
