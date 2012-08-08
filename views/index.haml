@@ -1,3 +1,12 @@
 %section#main
-  %h1 Hello World
-  %p This is the index page
+
+%script{src:'javascript/vendor/jquery-1.7.2.min.js'}
+%script{src:'javascript/vendor/underscore-min.js'}
+%script{src:'javascript/vendor/backbone-min.js'}
+%script{src:'javascript/app.js'}
+%script{src:'javascript/simple_view.js'}
+:javascript
+  jQuery(function($) {
+    new Application();
+    Backbone.history.start();
+  });
