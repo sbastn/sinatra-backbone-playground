@@ -1,10 +1,11 @@
-@import 'reset'
 @import 'base'
 
-body
-  background: black
-  color: whitesmoke
+// susy 
+$total-columns: 3
+$column-width: 5em 
+$gutter-width: 1em 
+$grid-padding: $gutter-width
 
 #main
-  margin: 0 auto
-  max-width: 90%
+  @include susy-grid-background
+  @include span-columns(3)
