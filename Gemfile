@@ -1,5 +1,6 @@
 source :rubygems
 
-gem 'thin'
+gem 'coffee-script'
 gem 'haml'
+gem 'thin'
 gem 'sass'

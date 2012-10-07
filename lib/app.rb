@@ -1,7 +1,9 @@
 require 'sinatra'
+require 'haml'
+require 'coffee_script'
 
 class Application < Sinatra::Base
-  set :views, Proc.new { File.join(root, '../views') }
+  set :root, File.dirname('..')
   set :public_folder, 'public'
 
   get '/' do
@@ -12,7 +14,7 @@ class Application < Sinatra::Base
     sass :"stylesheets/#{style}"
   end
 
-  get '/javascript/*.js' do |name|
+  get '/javascript/app/*.js' do |name|
     coffee :"coffee/#{name}"
   end
 end
